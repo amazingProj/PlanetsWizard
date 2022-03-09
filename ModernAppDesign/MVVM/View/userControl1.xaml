@@ -1,0 +1,196 @@
+﻿<UserControl x:Class="ModernAppDesign.MVVM.View.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ModernAppDesign.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock Text="Discover" 
+                   Foreground="White"
+                   FontSize="28"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"
+                   FontFamily="#Fredoka"/>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="400" Height="200">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aafff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10" RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="World Leader&#x0a;in global finance"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="10,10,0,0"
+                                   FontFamily="/Fonts/#Fredoka"/>
+                        <TextBlock Text="Get Started Today!"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="10,10,0,0"
+                                   FontFamily="/Fonts/#Fredoka"/>
+                    </StackPanel>
+
+                    <Image Width="250"
+                           Height="250"
+                           Source="/Images/true_man.png" Margin="199,61,-49,-111"/>
+                </Grid>
+            </Border>
+
+            <Border Width="200" 
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="45,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#ff37ba" Offset="0.0"/>
+                        <GradientStop Color="#ff3754" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <StackPanel>
+                        <TextBlock Text="Learn Finance&#x0a;From Real Industries&#x0a;Managers"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   Margin="10,10,0,0"
+                                   FontFamily="/Fonts/#Fredoka"/>
+                       
+
+                    </StackPanel>
+
+                    <Image
+                       Source="/Images/finance.png" Margin="17,53,-15,-10" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="1.293"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="Most Watched" 
+                   Foreground="White"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   Margin="0,20,0,20"
+                   FontFamily="#Fredoka"/>
+            <StackPanel Orientation="Horizontal">
+                <Border Width="150"
+                        Height="150"
+                        Background="#888eee"
+                        CornerRadius="10"
+                        Margin="0">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock Text="  BitCoins Works For You" 
+                             Foreground="White"
+                             FontSize="12"
+                             HorizontalAlignment="Left"
+                             Margin="0,15,0,0"
+                             FontFamily="#Fredoka"/>
+                            <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="have a&#x0a;huge profit" 
+                             Foreground="White"
+                             FontSize="16"
+                             HorizontalAlignment="Left"
+                             Margin="5,15,14.4,0"
+                             FontFamily="#Fredoka"/>
+                        </StackPanel>
+
+                        <Image Source="/Images/bitcoin.png" Margin="91,64,6.4,14.4"/>
+
+
+                    </Grid>
+                </Border>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="AntiqueWhite"
+                        CornerRadius="10">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock
+                                 FontWeight="Bold" VerticalAlignment="Center" 
+                                Text="E-Commerce" 
+                                Foreground="Blue"
+                                FontSize="18"
+                                HorizontalAlignment="Left"
+                                Margin="7,15,-20.6,0"
+                                FontFamily="#Fredoka"/>
+                            <TextBlock
+                               
+                                VerticalAlignment="Center" 
+                                Text="Ten Useful Tips" 
+                                Foreground="Blue"
+                                 FontSize="14"
+                                HorizontalAlignment="Left"
+                                Margin="5,15,14.4,0"
+                                FontFamily="#Fredoka" />
+                        </StackPanel>
+
+                        <Image Source="/Images/eCommerce.png" Margin="52,49,-23.6,-3.6"/>
+
+                    </Grid>
+                </Border>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#909367"
+                        CornerRadius="10">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock
+                                FontWeight="Bold" VerticalAlignment="Center" 
+                                Text="TedTalks&#x0a;Most Watched" 
+                                Foreground="White"
+                                FontSize="18"
+                                HorizontalAlignment="Left"
+                                Margin="7,15,-20.6,0"
+                                FontFamily="#Fredoka"/>
+                                                       
+                        </StackPanel>
+                        <Image Source="/Images/ted.png" Margin="3,17,-2.6,-17.6"/>
+                    </Grid>
+                </Border>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#18894e"
+                        CornerRadius="10">
+                    <Grid>
+                        <StackPanel>
+                            <TextBlock
+                                FontWeight="Bold" VerticalAlignment="Center" 
+                                Text="Finance &#x0a; Consistency..." 
+                                Foreground="White"
+                                FontSize="18"
+                                HorizontalAlignment="Left"
+                                Margin="7,15,-20.6,0"
+                                FontFamily="#Fredoka"/>
+
+                        </StackPanel>
+                        <Image Source="/Images/financeC.png" Margin="5,18,-4.6,-18.6"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
