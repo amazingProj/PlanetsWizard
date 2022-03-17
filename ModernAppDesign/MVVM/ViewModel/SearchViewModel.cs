@@ -2,9 +2,9 @@
 
 namespace ModernAppDesign.MVVM.ViewModel
 {
-    class DiscoveryViewModel : ObservableObject
+    class SearchViewModel : ObservableObject
     {
-        public DiscoveryViewModel()
+        public SearchViewModel()
         {
 
         }

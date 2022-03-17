@@ -13,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModernAppDesign
+namespace ModernAppDesign.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SearchView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SearchView : UserControl
     {
-        public MainWindow()
+        public SearchView()
         {
             InitializeComponent();
-        }
-
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
         }
     }
 }

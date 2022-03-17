@@ -6,15 +6,23 @@ namespace ModernAppDesign.MVVM.ViewModel
     {
         public RelayCommand HomeViewCommand { get; set; }
 
-        public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand SearchViewCommand { get; set; }
 
-        public RelayCommand FeaturedViewCommand { get; set; }
+        public RelayCommand MediaViewCommand { get; set; }
+
+        public RelayCommand SolarSystemViewCommand { get; set; }
+
+        public RelayCommand TodayPictureViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
 
-        public DiscoveryViewModel DiscoveryVM { get; set; }
+        public SearchViewModel SearchVM { get; set; }
 
-        public FeaturedViewModel FeaturedVM { get; set; }
+        public MediaViewModel MediaVM { get; set; }
+
+        public SolarSystemViewModel SolarSystemVM;
+
+        public TodayPictureViewModel TodayPictureVM;
 
         private object _currentView;
 
@@ -31,8 +39,10 @@ namespace ModernAppDesign.MVVM.ViewModel
         public MainViewModel()
         {
             HomeVM = new HomeViewModel();
-            DiscoveryVM = new DiscoveryViewModel();
-            FeaturedVM = new FeaturedViewModel();
+            SearchVM = new SearchViewModel();
+            MediaVM = new MediaViewModel();
+            SolarSystemVM = new SolarSystemViewModel();
+            TodayPictureVM = new TodayPictureViewModel();
 
             CurrentView = HomeVM;
 
@@ -41,14 +51,24 @@ namespace ModernAppDesign.MVVM.ViewModel
                 CurrentView = HomeVM;
             });
 
-            DiscoveryViewCommand = new RelayCommand(s =>
+            SearchViewCommand = new RelayCommand(s =>
             {
-                CurrentView = DiscoveryVM;
+                CurrentView = SearchVM;
             });
 
-            FeaturedViewCommand = new RelayCommand(s =>
+            MediaViewCommand = new RelayCommand(s =>
             {
-                CurrentView = FeaturedVM;
+                CurrentView = MediaVM;
+            });
+
+            SolarSystemViewCommand = new RelayCommand(s =>
+            {
+                CurrentView = SolarSystemVM;
+            });
+
+            TodayPictureViewCommand = new RelayCommand(s =>
+            {
+                CurrentView = TodayPictureVM;
             });
         }
     }

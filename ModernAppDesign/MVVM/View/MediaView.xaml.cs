@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ModernAppDesign.MVVM.View
 {
     /// <summary>
-    /// Interaction logic for DiscoveryView.xaml
+    /// Interaction logic for MediaView.xaml
     /// </summary>
-    public partial class DiscoveryView : UserControl
+    public partial class MediaView : UserControl
     {
-        public DiscoveryView()
+        public MediaView()
         {
             InitializeComponent();
         }

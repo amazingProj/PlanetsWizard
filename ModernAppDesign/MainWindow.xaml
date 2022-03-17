@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:ModernAppDesign"
         mc:Ignorable="d"
         
-        Height="600" Width="920"
+        Height="720" Width="1100"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
@@ -16,9 +16,10 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    
+
     <Border Background="#272537"
-            CornerRadius="20">
+            CornerRadius="20"
+            MouseDown="Border_MouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -34,7 +35,9 @@
                        FontSize="22"
                        Margin="40,0,0,0"
                        FontFamily="/Fonts/#Fredoka"/>
+
             <StackPanel Grid.Row="1">
+
                 <RadioButton Content="Home"
                              Height="50"
                              Foreground="White"
@@ -42,20 +45,34 @@
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
                              Command="{Binding HomeViewCommand}"/>
-                <RadioButton Content="Discovery"
+                <RadioButton Content="Search"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DiscoveryViewCommand}"/>
-               
-                <RadioButton Content="Featured"
+                             Command="{Binding SearchViewCommand}"/>
+
+                <RadioButton Content="Media"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding FeaturedViewCommand}"/>
-                
+                             Command="{Binding MediaViewCommand}"/>
+
+                <RadioButton Content="Solar &#x0a;System"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding SolarSystemViewCommand}"/>
+
+                <RadioButton Content="Today&#x0a;Picture"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding TodayPictureViewCommand}"/>
+
             </StackPanel>
 
             <TextBox   
@@ -64,10 +81,48 @@
                          Margin="50,5,5,5"
                          Grid.Column="1"
                          Style="{StaticResource Moderntextbox}"  />
+
+            <Button
+                Height="40"
+                Grid.Column="1"
+                VerticalContentAlignment="Center"
+                HorizontalAlignment="Right"
+                Content="Quick Analysis"
+                        Foreground="White"
+                        FontSize="12"
+                        FontWeight="Medium"
+                    Margin="0,-5,10,5" RenderTransformOrigin="0.151,0.363">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"
+                                    />
+                        <Setter Property="Background" Value="#FE6584"
+                                    />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF4C70" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="40" CornerRadius="8"
+                                    Background="{TemplateBinding Background}"
+                                    >
+                            <ContentPresenter VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
             <ContentControl Grid.Row="1" Grid.Column="1"
                             Margin="10"
-                            Content="{Binding CurrentView}"/> 
+                            Content="{Binding CurrentView}"/>
 
         </Grid>
-    </Border>    
+
+    </Border>
 </Window>
