@@ -149,23 +149,5 @@
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\true_man.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\bitcoin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\finance.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\eCommerce.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\ted.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\financeC.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
