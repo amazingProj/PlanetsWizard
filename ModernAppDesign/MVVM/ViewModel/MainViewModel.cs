@@ -4,6 +4,7 @@ namespace ModernAppDesign.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
     {
+        private BL.IBL bL = new BL.BL();
         public RelayCommand HomeViewCommand { get; set; }
 
         public RelayCommand SearchViewCommand { get; set; }
@@ -14,6 +15,8 @@ namespace ModernAppDesign.MVVM.ViewModel
 
         public RelayCommand TodayPictureViewCommand { get; set; }
 
+        public RelayCommand MyGalleryViewCommand { get; set; }
+
         public HomeViewModel HomeVM { get; set; }
 
         public SearchViewModel SearchVM { get; set; }
@@ -23,6 +26,8 @@ namespace ModernAppDesign.MVVM.ViewModel
         public SolarSystemViewModel SolarSystemVM;
 
         public TodayPictureViewModel TodayPictureVM;
+
+        public GalleryViewModel MyGalleryVM;
 
         private object _currentView;
 
@@ -43,6 +48,7 @@ namespace ModernAppDesign.MVVM.ViewModel
             MediaVM = new MediaViewModel();
             SolarSystemVM = new SolarSystemViewModel();
             TodayPictureVM = new TodayPictureViewModel();
+            MyGalleryVM = new GalleryViewModel();
 
             CurrentView = HomeVM;
 
@@ -70,6 +76,16 @@ namespace ModernAppDesign.MVVM.ViewModel
             {
                 CurrentView = TodayPictureVM;
             });
+
+            MyGalleryViewCommand = new RelayCommand(s =>
+            {
+                CurrentView = MyGalleryVM;
+            });
+        }
+
+        public BL.IBL GetBL()
+        {
+            return bL;
         }
     }
 }

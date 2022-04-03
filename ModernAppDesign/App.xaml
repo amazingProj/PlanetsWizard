@@ -30,6 +30,10 @@
             <DataTemplate DataType="{x:Type viewModel:TodayPictureViewModel}">
                 <view:TodayPictureView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:GalleryViewModel}">
+                <view:GalleryView/>
+            </DataTemplate>
         </ResourceDictionary>
         
     </Application.Resources>

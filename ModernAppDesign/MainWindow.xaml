@@ -73,6 +73,13 @@
                              Style="{StaticResource MenuButtonTheme}"
                              Command="{Binding TodayPictureViewCommand}"/>
 
+                <RadioButton Content="My&#x0a;Gallery"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding MyGalleryViewCommand}"/>
+
             </StackPanel>
 
             <TextBox   
@@ -83,7 +90,6 @@
                          Style="{StaticResource Moderntextbox}"  />
 
             <Button
-                Height="40"
                 Grid.Column="1"
                 VerticalContentAlignment="Center"
                 HorizontalAlignment="Right"
@@ -91,10 +97,10 @@
                         Foreground="White"
                         FontSize="12"
                         FontWeight="Medium"
-                    Margin="0,-5,10,5" RenderTransformOrigin="0.151,0.363">
+                    Margin="0,-4,-38,17.2" RenderTransformOrigin="0.151,0.363" Width="194">
                 <Button.Style>
                     <Style TargetType="Button">
-                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Fredoka"
                                     />
                         <Setter Property="Background" Value="#FE6584"
                                     />
